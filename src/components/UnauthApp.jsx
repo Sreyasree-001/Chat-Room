@@ -1,6 +1,9 @@
 import React from 'react'
+import { useAuth } from '../hooks/useAuth';
 
 const UnauthApp = () => {
+    const {login}= useAuth();
+
     return (
         <div>
             <div>
@@ -12,10 +15,10 @@ const UnauthApp = () => {
             <h1>Chat_Room</h1>
             <div className="card">
                 <p>
-                    Unauthorized room
+                    Unauthenticated room
                 </p>
-                <button>
-                    Authorize now
+                <button onClick={login}>
+                    Sign-in now
                 </button>
             </div>
             <p className="read-the-docs">

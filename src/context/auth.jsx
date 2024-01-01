@@ -10,7 +10,7 @@ const AuthProvider = (props) => {
         const user = await loginWithGoogle();
 
         if (!user) {
-            // TODO: Handle failed login
+            alert("please login")
         }
 
         setUser(user);
