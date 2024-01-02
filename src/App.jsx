@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-import UnauthApp from './components/UnauthApp'
-import AuthApp from './components/AuthApp';
-import { useAuth } from './hooks/useAuth';
+import { Outlet } from 'react-router-dom';
 
 function App() {
-  const {user} = useAuth();
-  return user ? <AuthApp/>: <UnauthApp/>;
-  
+  return (
+    <div >
+      <Outlet/>
+      <p className="read-the-docs">
+                <div className="container mx-auto text-center">
+                    <p className="text-sm mb-2">
+                        &copy; Copyright {new Date().getFullYear()} All rights reserved.
+                    </p>
+                </div>
+            </p>
+    </div>
+  )
 }
 
 export default App

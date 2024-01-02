@@ -30,4 +30,6 @@ async function loginWithGoogle() {
 
 export { loginWithGoogle };
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const analytics = getAnalytics(app);
+export const auth = getAuth();
+export default app;

@@ -4,7 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
-
+*{
+  font-family: 'sans';
+}
 .logo{
   height: 6em;
   padding: 1.5em;
@@ -12,9 +14,23 @@
   transition: filter 300ms;
   animation: logo-spin 2s infinite ;
 }
-
 .logo:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.btn{
+  background-color: #12b1de;
+}
+.unauth-box{
+  background-color: #f3f9fc;
+  width: 450px;
+  border-radius: 50%;
+  
+}
+.card{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.room-name{
+  color: #1e10dbb4;
 }
 
 @keyframes logo-spin {
