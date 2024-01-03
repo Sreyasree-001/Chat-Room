@@ -1,10 +1,9 @@
 import './Login.css'
 import GoogleButton from 'react-google-button'
-import { useAuth } from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider, loginWithGoogle } from '../services/firebase';
+import { auth, googleProvider } from '../services/firebase';
 
 const SignUp = () => {
 
