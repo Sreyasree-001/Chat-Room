@@ -32,4 +32,5 @@ export { loginWithGoogle };
 const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const auth = getAuth();
+export const googleProvider = new GoogleAuthProvider;
 export default app;

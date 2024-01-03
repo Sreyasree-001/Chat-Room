@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AuthContext } from '../context/auth';
-import { useNavigate } from 'react-router-dom';
+
 
 function useAuth() {
     

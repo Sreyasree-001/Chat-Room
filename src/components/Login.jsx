@@ -18,6 +18,7 @@ const Login = () => {
             console.log(userCred.user);
             const user = userCred.user
             localStorage.setItem('token', user.accessToken)
+            localStorage.setItem('user',email)
             navigate("/")
         }
         catch (error) {

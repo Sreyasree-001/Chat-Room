@@ -3,13 +3,14 @@ import GoogleButton from 'react-google-button'
 import { useAuth } from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../services/firebase';
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider, loginWithGoogle } from '../services/firebase';
 
 const SignUp = () => {
-    const { login } = useAuth();
+
     const navigate = useNavigate();
     const navigateToLogin = useNavigate();
+    const navigateGoogle = useNavigate();
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -30,12 +31,20 @@ const SignUp = () => {
         }
     }
 
-    const handleGoogle = () => {
-        var result = confirm("Do you want to sign in?")
-        if (result == true) { login }
-        navigate("/")
+    const handleGoogle = async (e) => {
+        e.preventDefault();
+        try {
+            const cred = await signInWithPopup(auth, googleProvider);
+            console.log(cred);
+            const user = cred.user
+            localStorage.setItem('token',user.accessToken)
+            localStorage.setItem('user', JSON.stringify(user.displayName))
+            navigateGoogle("/")
+        }
+        catch (error) {
+            console.error(error)
+        }
     }
-
     return (
         <div>
             <h1 style={{ textDecoration: 'underline' }}>Sign Up</h1>
@@ -73,7 +82,7 @@ const SignUp = () => {
                 <div className="form-controls">
                     <button type='submit'
                         className="button">SignUp</button>
-                    <GoogleButton onClick={handleGoogle} />
+                        <GoogleButton onClick={handleGoogle} />
                 </div>
                 <div>
                     <p>Already have an account?
@@ -87,3 +96,10 @@ const SignUp = () => {
 }
 
 export default SignUp
+
+/**
+ * var result = confirm("Do you want to sign in?")
+        if (result == true) { login }
+        console.log("hello")
+        navigateGoogle("/")
+ */
