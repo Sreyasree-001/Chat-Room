@@ -1,25 +1,14 @@
-import { useNavigate } from "react-router-dom"
+import { Footer } from "./Footer"
+import { Header } from "./Header";
+import { Nav } from "./Navbar";
 
 const UnauthApp = () => {
-    const navigate = useNavigate();
 
     return (
-        <div className="unauth-box">
-            <div>
-                <a href="#" target="_blank">
-                    <img src="https://cryptologos.cc/logos/chatcoin-chat-logo.png" className="logo" alt="React logo" />
-                </a>
-            </div>
-            <h1 className="room-name">Chat_Rooms</h1>
-            <div className="card">
-                <p className="welcome">
-                    Welcome to chat rooms
-                </p>
-                <button className="btn"
-                onClick={() => { navigate("/login") }}>
-                    Get Started
-                </button>
-            </div>
+        <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTehIB11tqKnKhNn53ATGUSYqq4vs5WkdQ2Yg&usqp=CAU')] bg-no-repeat bg-center bg-cover">
+            <Nav/>
+            <Header/>
+            <Footer/>
         </div>
     )
 }
