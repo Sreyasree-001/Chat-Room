@@ -1,5 +1,6 @@
 import { useState } from "react";
-export const Nav = () => {
+import { FaUserCircle } from "react-icons/fa";
+export const Nav = ({ user, room }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -12,22 +13,27 @@ export const Nav = () => {
                         title="Chat_Rooms"
                         className="inline-flex items-center"
                     >
-                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                            Chat_Rooms
+                        <span className="ml-2 text-4xl font-bold tracking-wide text-gray-100">
+                            {room ? room : <>ChatRoom</>}
                         </span>
                     </a>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
-
-                        <li>
-                            <a
-                                href="/"
-                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
-                            >
-                                Sign up
-                            </a>
-                        </li>
+                        {user ?
+                            <div className="text-white flex flex-row px-2">
+                                {user}
+                                <FaUserCircle />
+                            </div> :
+                            <li>
+                                <a
+                                    href="/signup"
+                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+                                    aria-label="Sign up"
+                                    title="Sign up"
+                                >
+                                    Sign up
+                                </a>
+                            </li>
+                        }
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -36,7 +42,7 @@ export const Nav = () => {
                             className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
                             onClick={() => setIsMenuOpen(true)}
                         >
-                            <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+                            <svg className="w-5 text-gray-200" viewBox="0 0 24 24">
                                 <path
                                     fill="currentColor"
                                     d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -76,17 +82,22 @@ export const Nav = () => {
                                     </div>
                                     <nav>
                                         <ul className="space-y-4 bg-gray-300">
-
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-2 font-medium tracking-wide text-purple-900 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Sign up"
-                                                >
-                                                    Sign up
-                                                </a>
-                                            </li>
+                                            {user ?
+                                                <div className="text-white flex flex-row px-2">
+                                                    {user}
+                                                    <FaUserCircle />
+                                                </div> :
+                                                <li>
+                                                    <a
+                                                        href="/signup"
+                                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+                                                        aria-label="Sign up"
+                                                        title="Sign up"
+                                                    >
+                                                        Sign up
+                                                    </a>
+                                                </li>
+                                            }
                                         </ul>
                                     </nav>
                                 </div>

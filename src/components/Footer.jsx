@@ -117,13 +117,13 @@ export const Footer = () => {
                 </div>
             </div>
             <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-                <p className="text-sm text-gray-500">
+                <div className="text-sm text-gray-500">
                     <div className="container mx-auto text-center">
                         <p className="text-sm mb-2">
                             &copy; Copyright {new Date().getFullYear()} All rights reserved.
                         </p>
                     </div>
-                </p>
+                </div>
                 <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
                     <li>
                         <a

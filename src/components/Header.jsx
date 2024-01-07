@@ -48,7 +48,7 @@ export const Header = () => {
                         </div>
                         <div>
                             <button className="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md hover:text-black bg-sky-600 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
-                                onClick={() => { navigate("/login") }}>
+                                onClick={() => { navigate("/signup") }}>
                                 Get Started
                             </button>
                         </div>

@@ -1,4 +1,4 @@
-import './Login.css'
+
 import GoogleButton from 'react-google-button'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -21,8 +21,10 @@ const SignUp = () => {
             const userCred = await createUserWithEmailAndPassword(auth, email, password);
             console.log(userCred.user);
             const user = userCred.user
+            
+            localStorage.setItem('data',user.uid)
             localStorage.setItem('token', user.accessToken)
-            localStorage.setItem('user', JSON.stringify(username))
+            localStorage.setItem('user', username)
             navigate("/")
         }
         catch (error) {
@@ -37,6 +39,7 @@ const SignUp = () => {
             console.log(cred);
             const user = cred.user
             const name = user.displayName
+            localStorage.setItem('data',user.uid);
             localStorage.setItem('token', user.accessToken)
             localStorage.setItem('user', name)
             navigateGoogle("/")
@@ -122,7 +125,7 @@ const SignUp = () => {
                     <div className="flex w-full justify-center underline">
                         <p>Already have an account?
                             <button
-
+                                className='font-semibold hover:text-blue-700'
                                 onClick={() => { navigateToLogin("/login") }}
                             >Log in
                             </button>

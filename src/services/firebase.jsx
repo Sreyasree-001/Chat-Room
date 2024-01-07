@@ -1,6 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp,
+    onSnapshot,
+    query,
+    orderBy
+}
+    from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyC9VWEffag8iY_tPnJzCVBwbBn7Ngdh8nw",
@@ -28,9 +38,41 @@ async function loginWithGoogle() {
     }
 }
 
-export { loginWithGoogle };
+async function sendMessage(roomId, user, uid, text) {
+    try {
+        await addDoc(collection(db, 'chat-rooms', roomId, 'messages'), {
+            uid: uid,
+            displayName: user,
+            text: text.trim(),
+            timestamp: serverTimestamp(),
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function getMessages(roomId, callback){
+    return onSnapshot(
+        query(
+            collection(db, 'chat-rooms', roomId, 'messages'),
+            orderBy('timestamp', 'asc')
+        ),
+        (querySnapshot) => {
+            const messages = querySnapshot.docs.map((doc)=> (
+                {
+                    id: doc.id,
+                    ...doc.data(),
+                }
+            ));
+            callback(messages);
+        }
+    );
+}
+
+export { loginWithGoogle, sendMessage , getMessages};
 const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const auth = getAuth();
 export const googleProvider = new GoogleAuthProvider;
+const db = getFirestore(app);
 export default app;

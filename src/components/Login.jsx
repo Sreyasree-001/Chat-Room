@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Login.css'
 import { useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../services/firebase';
@@ -18,6 +17,8 @@ const Login = () => {
             const userCred = await signInWithEmailAndPassword(auth, email, password);
             console.log(userCred.user);
             const user = userCred.user
+            const uid = user.uid;
+            localStorage.setItem('data',uid)
             localStorage.setItem('token', user.accessToken)
             localStorage.setItem('user', username)
             navigate("/")
@@ -33,8 +34,9 @@ const Login = () => {
             const cred = await signInWithPopup(auth, googleProvider);
             console.log(cred);
             const user = cred.user
+            localStorage.setItem('data',user.uid);
             localStorage.setItem('token', user.accessToken)
-            localStorage.setItem('user', JSON.stringify(user.displayName))
+            localStorage.setItem('user', user.displayName)
             navigate("/")
         }
         catch (error) {
@@ -110,7 +112,7 @@ const Login = () => {
                             className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             type='submit'
                         >Login</button>
-                        <div className="flex w-full justify-center"
+                        <div className="flex w-full justify-center space-x-1 my-5 mx-1 underline"
                             >
                             <p>log in with google</p>
                             <GoogleButton
@@ -122,7 +124,8 @@ const Login = () => {
                     </div>
                     <div className="flex w-full justify-center underline">
                         <p>Do not have any account?
-                            <button
+                            <button 
+                                className='font-semibold hover:text-blue-700'
                                 onClick={() => { navigate("/signup") }}
                             >SignUp
                             </button>
