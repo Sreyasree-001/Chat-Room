@@ -16,7 +16,7 @@ const Rooms = [
 },
     { id: 'general', 
     title: '💬 General 💬', 
-    image:'https://img.freepik.com/premium-photo/open-book-with-abstract-business-illustration_488220-4978.jpg',
+    image:'https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?cs=srgb&dl=pexels-pixabay-256417.jpg&fm=jpg',
     info: 'Grow your knowledge'
 },
     { id: 'news', 
