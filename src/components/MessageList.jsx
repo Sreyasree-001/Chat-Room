@@ -25,7 +25,7 @@ const MessageList = ({ roomId }) => {
 
     return (
         <div
-            className="mb-4 h-full flex max-w-full max-h-full overflow-scroll overflow-x-hidden"
+            className="mb-4 h-full flex max-w-full max-h-full overflow-scroll overflow-x-hidden scrollbar scrollbar-none"
             ref={containerRef}
         >
             {

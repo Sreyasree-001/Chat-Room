@@ -8,7 +8,7 @@ export default {
     extend: {},
   },
   plugins: [
-    
+    require('tailwind-scrollbar')({ nocompatible: true }),
   ],
 }
 
