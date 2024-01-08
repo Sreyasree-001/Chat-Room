@@ -36,7 +36,7 @@ export const Content = () => {
                 <ul className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8 text-center">
                     {Rooms.map((room) => (
                         <li
-                            className="bg-white bg-opacity-50 backdrop-blur-sm"
+                            className="bg-white bg-opacity-50 backdrop-blur-sm transition-shadow duration-200 hover:shadow-lg hover:shadow-black"
                             key={room.id}>
                             <Link
                                 className="mb-2 text-xl font-bold leading-none sm:text-2xl"

@@ -26,7 +26,7 @@ export const Nav = ({ user, room }) => {
                             <li>
                                 <a
                                     href="/signup"
-                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-500 hover:bg-violet-900 focus:shadow-outline focus:outline-none"
                                     aria-label="Sign up"
                                     title="Sign up"
                                 >
@@ -90,7 +90,7 @@ export const Nav = ({ user, room }) => {
                                                 <li>
                                                     <a
                                                         href="/signup"
-                                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+                                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-500 hover:bg-violet-900 focus:shadow-outline focus:outline-none"
                                                         aria-label="Sign up"
                                                         title="Sign up"
                                                     >
