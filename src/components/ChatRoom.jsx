@@ -4,8 +4,17 @@ import { Nav } from "./Navbar"
 import Messageinput from './Messageinput'
 import  MessageList from "./MessageList"
 import { FaAngleLeft } from "react-icons/fa6";
+import { useEffect, useState } from 'react'
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ChatRoom = () => {
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }, [])
     const user = localStorage.getItem('user')
     const params = useParams();
     const room = Rooms.find(
@@ -16,6 +25,19 @@ const ChatRoom = () => {
     }
     return (
         <>
+        {
+                loading ?
+                    <div className="flex flex-col items-center">
+                    <ClipLoader
+                        className="my-72"
+                        color="green"
+                        loading={loading}
+                        size={50}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
+                    </div>
+                    :
         <div className="bg-[url('https://images.pexels.com/photos/2649403/pexels-photo-2649403.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-2649403.jpg&fm=jpg')] bg-no-repeat bg-center bg-cover h-screen">
         <Nav user={user} room={room.title}/>
             <div 
@@ -34,6 +56,7 @@ const ChatRoom = () => {
             </div>
             
         </div>
+        }
         </>
     )
 }
