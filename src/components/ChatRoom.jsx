@@ -19,7 +19,7 @@ const ChatRoom = () => {
         <div className="bg-[url('https://images.pexels.com/photos/2649403/pexels-photo-2649403.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-2649403.jpg&fm=jpg')] bg-no-repeat bg-center bg-cover h-screen">
         <Nav user={user} room={room.title}/>
             <div 
-            className='bg-white w-5 ml-1 rounded-sm'
+            className='w-5 ml-1 rounded-sm'
             >
                 <Link
                     to="/"
@@ -27,7 +27,7 @@ const ChatRoom = () => {
                     <FaAngleLeft size="25px"/>
                 </Link>
             </div>
-            <div className="w-full mt-4 mx-auto flex flex-col flex-grow  border-solid border-white border-2 rounded-md overflow-hidden h-3/4 sm:max-w-xl md:max-w-xl lg:max-w-5xl">
+            <div className="w-full mt-4 mx-auto backdrop-blur-0 flex flex-col flex-grow  border-solid border-white border-2 rounded-md shadow-black shadow-md overflow-hidden h-3/4 sm:max-w-xl md:max-w-xl lg:max-w-5xl">
                 <MessageList roomId={room.id}/>
                 <Messageinput
                 roomId={room.id} />

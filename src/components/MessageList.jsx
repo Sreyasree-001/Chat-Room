@@ -38,9 +38,9 @@ function Message({message, isOwnMessage}) {
     const { displayName, text } = message;
     return (
         <li
-        className={['py-2 px-4 mb-2 ml-1 bg-white border-4 text-left border-l-pink-700 rounded-md max-w-40 sm:max-w-80 md:max-w-96 lg:max-w-lg',
+        className={['py-2 px-4 mb-2 mx-1 bg-white border-x-4 border-r-0 text-left border-l-pink-700 rounded-md max-w-40 sm:max-w-80 md:max-w-96 lg:max-w-lg',
         isOwnMessage && 
-        'bg-green-300 self-end text-right border-r-green-700 border-l-0'].join(' ')}
+        'bg-green-300 self-end text-right border-r-4 border-r-green-700 border-l-0'].join(' ')}
         >
             <h4 className="mb-2">
                 {isOwnMessage ? 
