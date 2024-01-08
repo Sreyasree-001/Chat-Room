@@ -124,6 +124,7 @@ export const Footer = () => {
                         </p>
                     </div>
                 </div>
+                <p className="text-md mb-2 text-gray-500">Made for you by Sreyasree</p>
                 <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
                     <li>
                         <a

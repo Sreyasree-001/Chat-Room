@@ -26,16 +26,17 @@ export const Content = () => {
                     </h2>
                 </div>
                 <p className="w-full text-gray-700 lg:text-sm lg:max-w-md">
-                    Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem
-                    accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-                    perspiciatis unde omnis iste.
+                    Click on any room of your choice. Start your conversation in 
+                    our public chat
+                    room. Share your thoughts with the people around you.
+                    
                 </p>
             </div>
             <div>
-                <ul className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
+                <ul className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8 text-center">
                     {Rooms.map((room) => (
                         <li
-                            className=""
+                            className="bg-white bg-opacity-50 backdrop-blur-sm"
                             key={room.id}>
                             <Link
                                 className="mb-2 text-xl font-bold leading-none sm:text-2xl"
