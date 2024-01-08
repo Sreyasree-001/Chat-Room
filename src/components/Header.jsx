@@ -15,7 +15,7 @@ export const Header = () => {
                 </svg>
                 <img
                     className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-                    src="https://images.pexels.com/photos/2657669/pexels-photo-2657669.jpeg?cs=srgb&dl=pexels-drew-williams-2657669.jpg&fm=jpg"
+                    src="./image.png"
                     alt=""
                 />
             </div>
