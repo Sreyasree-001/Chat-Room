@@ -15,19 +15,20 @@ const ChatRoom = () => {
         //TODO:404
     }
     return (
-        <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTehIB11tqKnKhNn53ATGUSYqq4vs5WkdQ2Yg&usqp=CAU')] bg-no-repeat bg-center bg-cover h-screen">
+        <div className="bg-[url('https://images.pexels.com/photos/2649403/pexels-photo-2649403.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-2649403.jpg&fm=jpg')] bg-no-repeat bg-center bg-cover h-screen">
             <Nav user={user} room={room.title}/>
             
             <div 
-            className='bg-white bg-transparent text-black'
+            className='bg-white bg-transparent w-5 ml-1 rounded-sm content-center'
             >
                 <Link
                     to="/"
                 >
-                    <FaAngleLeft size="25px" color='white'/>
+                    <FaAngleLeft size="25px"/>
                 </Link>
             </div>
-            <div className="w-full mt-4 flex flex-col flex-grow  border-solid border-white border-2 rounded-md bg-blue-900 bg-opacity-65 overflow-hidden h-3/4">
+            <div className="bg-[url('')] bg-no-repeat bg-center bg-cover
+            w-full mt-4 flex flex-col flex-grow  border-solid border-white border-2 rounded-md overflow-hidden h-3/4">
                 <MessageList roomId={room.id}/>
                 <Messageinput
                 roomId={room.id} />

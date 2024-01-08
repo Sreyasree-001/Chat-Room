@@ -40,7 +40,7 @@ function Message({message, isOwnMessage}) {
         <li
         className={['py-2 px-4 mb-2 ml-1 bg-white border-4 text-left border-l-pink-700 rounded-md max-w-40 sm:max-w-80 md:max-w-96 lg:max-w-lg',
         isOwnMessage && 
-        'bg-blue-300 self-end text-right border-r-green-700 border-l-0'].join(' ')}
+        'bg-green-300 self-end text-right border-r-green-700 border-l-0'].join(' ')}
         >
             <h4 className="mb-2">
                 {isOwnMessage ? 

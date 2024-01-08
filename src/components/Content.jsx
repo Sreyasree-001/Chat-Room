@@ -57,7 +57,7 @@ export const Content = () => {
             </div>
             <div className="text-center">
                 <p
-                    className="inline-flex items-center font-semibold space-x-1 transition-colors duration-200 text-black hover:text-white"
+                    className="inline-flex items-center font-semibold space-x-1 transition-colors duration-200 text-black hover:text-blue-500"
                 >
                 <button 
                 onClick={handleClick}
