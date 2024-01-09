@@ -15,7 +15,7 @@ export const Header = () => {
                 </svg>
                 <img
                     className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-                    src="./image.png"
+                    src="https://images.pexels.com/photos/7610449/pexels-photo-7610449.jpeg"
                     alt=""
                 />
             </div>
@@ -24,15 +24,15 @@ export const Header = () => {
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-purple-300">
                         Welcome
                     </p>
-                    <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 backdrop-blur-sm sm:text-4xl sm:leading-none">
-                    Connect
-                        <br className="hidden md:block" />
-                        more with{' '}
+                    <h2 className="mb-5 font-serif text-3xl font-bold tracking-tight text-gray-900 backdrop-blur-sm bg-gray-300 bg-opacity-30 rounded-md sm:text-4xl sm:leading-none lg:bg-transparent">
+                    Connect<br/>
+                        
+                        {' '}
                         <span className="inline-block text-deep-purple-accent-400">
-                            us
+                        more with  us
                         </span>
                     </h2>
-                    <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
+                    <p className="pr-5 mb-5 text-base text-black backdrop-blur-sm bg-gray-300 bg-opacity-30 md:text-lg lg:bg-transparent ">
                     Welcome to our chat-rooms<br/>
                     Share your thoughts and connect to the world
                     </p>
