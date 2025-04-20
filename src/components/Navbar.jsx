@@ -23,16 +23,17 @@ export const Nav = ({ user, room }) => {
                                 {user}
                                 <FaUserCircle />
                             </div> :
-                            <li>
-                                <a
-                                    href="/signup"
-                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-500 hover:bg-violet-900 focus:shadow-outline focus:outline-none"
-                                    aria-label="Sign up"
-                                    title="Sign up"
-                                >
-                                    Sign up
-                                </a>
-                            </li>
+                            <></>
+                            // <li>
+                            //     <a
+                            //         href="/signup"
+                            //         className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-500 hover:bg-violet-900 focus:shadow-outline focus:outline-none"
+                            //         aria-label="Sign up"
+                            //         title="Sign up"
+                            //     >
+                            //         Sign up
+                            //     </a>
+                            // </li>
                         }
                     </ul>
                     <div className="lg:hidden">
@@ -87,16 +88,17 @@ export const Nav = ({ user, room }) => {
                                                     {user}
                                                     <FaUserCircle />
                                                 </div> :
-                                                <li>
-                                                    <a
-                                                        href="/signup"
-                                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-500 hover:bg-violet-900 focus:shadow-outline focus:outline-none"
-                                                        aria-label="Sign up"
-                                                        title="Sign up"
-                                                    >
-                                                        Sign up
-                                                    </a>
-                                                </li>
+                                                <></>
+                                                // <li>
+                                                //     <a
+                                                //         href="/signup"
+                                                //         className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-500 hover:bg-violet-900 focus:shadow-outline focus:outline-none"
+                                                //         aria-label="Sign up"
+                                                //         title="Sign up"
+                                                //     >
+                                                //         Sign up
+                                                //     </a>
+                                                // </li>
                                             }
                                         </ul>
                                     </nav>
