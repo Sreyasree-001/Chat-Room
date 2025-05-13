@@ -6,8 +6,8 @@ const Rooms = [
 },
     { id: 'food',
     title: '🍔 Food 🍔', 
-    image:'https://w.forfun.com/fetch/e5/e594d337200536d04e08e6584a690275.jpeg',
-    info: 'Knew delicates'
+    image:'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg',
+    info: 'Have you tried this?'
 },
 { id: 'music', 
     title: '🎹 Music 🎹', 
@@ -21,7 +21,7 @@ const Rooms = [
 },
     { id: 'news', 
     title: '🗞 News 🗞' , 
-    image:'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81qpdoywG8L._AC_UF1000,1000_QL80_.jpg',
+    image:'https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     info:'Explore the world'
 },
     { id: 'sports', 
